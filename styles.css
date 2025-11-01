@@ -1,6 +1,13 @@
+/* Paleta de Cores Acessíveis:
+   Fundo: #f0f2f5 (muito claro)
+   Texto Principal: #333 (escuro)
+   Cor de Ação/Botão: #0056b3 (azul marinho escuro) - Contraste alto com branco
+   Borda/Linhas: #ddd (cinza claro)
+*/
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #4CAF50, #81C784); /* Fundo gradiente */
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5; /* Fundo claro para contraste geral */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,77 +18,73 @@ body {
 .login-container {
     background-color: #ffffff;
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    text-align: center;
 }
 
 .login-form h2 {
+    text-align: center;
+    color: #333; /* Texto escuro, alto contraste com fundo branco */
     margin-bottom: 1.5rem;
-    color: #333;
 }
 
 .input-group {
     margin-bottom: 1rem;
-    text-align: left;
 }
 
 .input-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #555;
+    color: #333; /* Texto escuro, alto contraste com fundo branco */
 }
 
 .input-group input {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    border: 1px solid #ddd; /* Borda visível, mas suave */
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #333; /* Garante que o texto digitado seja legível */
 }
 
 button {
     width: 100%;
     padding: 0.75rem;
     border: none;
-    border-radius: 5px;
-    background-color: #4CAF50; /* Cor do botão */
-    color: white;
+    border-radius: 4px;
+    background-color: #0056b3; /* Cor de ação principal, excelente contraste com texto branco */
+    color: #ffffff; /* Texto branco */
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
     margin-top: 1rem;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #004494; /* Tom mais escuro no hover para feedback visual */
 }
 
-.form-footer {
+.footer-links {
+    text-align: center;
     margin-top: 1rem;
-    font-size: 0.9rem;
+    font-size: 0.875rem;
 }
 
-.form-footer a {
-    color: #4CAF50;
+.footer-links a {
+    color: #0056b3; /* Cor de link, contraste suficiente com o fundo */
     text-decoration: none;
+    margin: 0 0.5rem;
 }
 
-.form-footer a:hover {
+.footer-links a:hover {
     text-decoration: underline;
 }
 
-.form-footer span a {
-    margin-left: 0.25rem;
-}
-
-/* Responsividade básica */
-@media (max-width: 480px) {
-    .login-container {
-        margin: 1rem;
-        padding: 1.5rem;
-    }
+/* Adição para acessibilidade: foco visível nos inputs */
+.input-group input:focus, button:focus, .footer-links a:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
 }
