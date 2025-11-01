@@ -1,10 +1,7 @@
-
-## Autor
-
-Seu Nome ou Nickname
-*   [Seu Perfil do GitHub](Link para o seu perfil)
-*   [Seu LinkedIn](Link para o seu LinkedIn)
-
-## Licença
-
-Este projeto está licenciado sob a Licença MIT. (Você pode alterar isso se preferir outra licença ou nenhuma).
+echo "# teste" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/dzzeti-source/teste02.git
+git push -u origin main
